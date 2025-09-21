@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heal Her - Health Assistant</title>
+  <link rel="stylesheet" href="css/chat.css">
+  <script src="js/chat.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="medguard-header">
+    <button class="hamburger-menu" aria-label="Main menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E5E5EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+
+    <div class="header-title-container">
+      <h1 class="header-title">Heal Her</h1>
+      <button class="info-icon" aria-label="Information about Heal Her">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E5E5EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <circle cx="12" cy="8" r="1"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="header-actions">
+      <button class="new-chat" aria-label="Start new chat">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E5E5EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 19h6a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-6M3 12h10M3 6h4M3 18h4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="chat-container" id="chat" honors="log" aria-live="polite">
+    <div class="background-message" id="backgroundMessage">Hey love, how can I support you today?</div>
+  </div>
+
+  <div class="input-container">
+    <button type="button" class="image-button" aria-label="Upload image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3D62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <path d="M21 15l-5-5L5 21"/>
+      </svg>
+    </button>
+
+    <input type="text" id="userInput" placeholder="Type your concern here..." aria-label="Enter your concern">
+
+    <div class="input-buttons-group">
+      <button type="button" class="mic-button" aria-label="Record voice">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3D62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="23"/>
+          <line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+      </button>
+      <button type="button" id="sender" class="send-button" aria-label="Send message">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3D62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"/>
+          <polyline points="5 12 12 5 19 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal" id="infoModal" role="dialog" aria-hidden="true">
+    <div class="modal-content info-modal" role="document" tabindex="-1">
+      <button class="modal-close" aria-label="Close modal">×</button>
+      <p>💜 Heal Her is your trusted health assistant. Not a substitute for a doctor. Please seek professional care in emergencies.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="newChatModal" role="dialog" aria-hidden="true">
+    <div class="modal-content" role="document" tabindex="-1">
+      <button class="modal-close" aria-label="Close modal">×</button>
+      <p>Are you sure you want to start a new chat?</p>
+      <div class="modal-actions">
+        <button class="cancel-btn">Cancel</button>
+        <button class="confirm-btn">Yes, Start New</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="comingSoonModal" role="dialog" aria-hidden="true">
+    <div class="modal-content" role="document" tabindex="-1">
+      <button class="modal-close" aria-label="Close modal">×</button>
+      <p>This feature is coming soon!</p>
+    </div>
+  </div>
+</body>
+</html>
