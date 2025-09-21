@@ -8,7 +8,7 @@ const DOM = {
 
 // === Backend Config ===
 const AI_CONFIG = {
-  endpoint: 'http://127.0.0.1:8000/chat', // Local backend
+  endpoint: 'https://heal-her-backend-1.onrender.com/chat', // Local backend
 };
 
 // === State Variables ===
