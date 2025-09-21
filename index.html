@@ -5,123 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Heal Her</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --dusty-rose: #DA8CA0;
-      --midnight-indigo: #1C1246;
-      --text-light: #FAFAFA;
-    }
-
-    body {
-      background-color: var(--midnight-indigo);
-      font-family: 'Nunito', sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      margin: 0;
-    }
-
-    .main-content {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .intro-container {
-      text-align: center;
-    }
-
-    #logo-img {
-      width: 120px;
-      height: 120px;
-      opacity: 0;
-      transform: scale(0.5);
-      animation: logoFadeIn 1s forwards ease-in-out;
-    }
-
-    #logo-text {
-      font-family: 'Nunito', sans-serif;
-  font-size: 3.2rem;
-      color: var(--dusty-rose);
-      margin-top: 1rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUpFadeIn 1s 1s forwards;
-       text-shadow: 2px 2px 6px rgba(218, 140, 160, 0.5);
-    }
-
-    #slogan {
-      font-size: 1.5rem;
-      margin-top: 1.5rem;
-      color: var(--text-light);
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-       text-shadow: 1px 1px 4px rgba(250, 250, 250, 0.3);
-    }
-
-    button {
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      padding: 0.7rem 2rem;
-      background-color: var(--dusty-rose);
-      color: var(--midnight-indigo);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    button.visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-
-    @keyframes logoFadeIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes slideUpFadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .copyright {
-      font-size: 1.1rem;
-      color: #CCCCD9;
-      margin-top: 2rem;
-      opacity: 0;
-      animation: fadeIn 0.5s 3s forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    footer.copyright {
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="main-content">
     <div class="intro-container">
-      <!-- Replacing SVG with animated image -->
       <img id="logo-img" src="assets/heallogo.png" alt="Heal Her Logo" />
-
       <h1 id="logo-text">Heal Her</h1>
       <p id="slogan"></p>
       <a href="chat.html">
@@ -134,31 +23,6 @@
     © 2025 Heal Her | A SliverVerse Innovation. All rights reserved.
   </footer>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const sloganText = "Her Questions. Our Answers. Her Power.";
-      const sloganEl = document.getElementById('slogan');
-      const button = document.getElementById('enter-symptom');
-
-      let index = 0;
-      const speed = 70;
-
-      function type() {
-        if (index < sloganText.length) {
-          sloganEl.textContent += sloganText.charAt(index);
-          index++;
-          setTimeout(type, speed);
-        } else {
-          button.classList.add('visible');
-        }
-      }
-
-      setTimeout(() => {
-        sloganEl.style.opacity = 1;
-        sloganEl.style.transform = "translateY(0)";
-        type();
-      }, 2200);
-    });
-  </script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
